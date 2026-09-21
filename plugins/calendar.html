@@ -1,0 +1,171 @@
+      <style>
+         :root {
+            --Primary-color: rgb(103, 84, 42);
+            --White: rgb(255, 253, 243);
+            --Color-1: rgb(174, 164, 118);
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         image-rendering: pixelated;
+         color:var(--Primary-color);
+         }
+         table {
+         width: 100%; 
+         table-layout: fixed;
+         height:100px;
+         border:0px;
+         color:black;
+         border-spacing: 3px;
+         padding:10px;
+         border: 3px;
+         }
+         td {
+         border-color:var(--Primary-color);
+         text-align: center;
+         text-transform: uppercase;
+         font-family:'MS gothic';
+         background-color:var(--Color-7);
+         border:1px solid;
+         }
+         td:has(.date) {
+         background-color:var(--Color-3);
+         text-indent: -0.5px;
+         }
+         .date strong {
+         text-shadow: 1px 0px var(--Primary-color), -1px 0px var(--Primary-color), 0px 1px var(--Primary-color), 0px -1px var(--Primary-color), 0 0;
+         color:var(--Color-1);
+         }
+         .month{
+         background: linear-gradient(to bottom, #ffffff 0%, var(--Color-4) 50%, var(--Color-5) 51%, var(--Color-6) 100%);
+         box-shadow: 2px 3px 3px inset #ffffff, -1px -1px 1px inset var(--Color-5);
+         text-shadow: 1px 0px var(--Primary-color), -1px 0px var(--Primary-color), 0px 1px var(--Primary-color), 0px -1px var(--Primary-color), 0 0;
+         border-color: var(--Primary-color);
+         font-size:1em;
+         }
+         .month strong {
+         color: var(--White);
+         text-shadow: 0 1px var(--Primary-color), 1px 0px var(--Primary-color), 0 -1px var(--Primary-color), -1px 0px var(--Primary-color), 1px -1px var(--Primary-color), -1px 1px var(--Primary-color), 1px 1px var(--Primary-color), -1px -1px var(--Primary-color);
+         letter-spacing: 4.6px;
+         align-items: center;
+         }
+         .week-1, .week-2, .week-3, .week-4, .week-5, .week-6, .week-7 {
+         color: var(--White);
+         font-weight: bold;
+         background:linear-gradient(to bottom, #ffffff 0%, var(--Color-1) 50%, var(--Color-2) 51%, var(--Color-3) 100%);
+         text-shadow: 1px 0px var(--Primary-color), -1px 0px var(--Primary-color), 0px 1px var(--Primary-color), 0px -1px var(--Primary-color), 0 0;
+         border-color:var(--Primary-color);
+         }
+      </style>
+
+<center>
+<script LANGUAGE="JavaScript">
+
+<!-- Begin
+monthnames = new Array(
+"January",
+"Februrary",
+"March",
+"April",
+"May",
+"June",
+"July",
+"August",
+"September",
+"October",
+"November",
+"Decemeber");
+var linkcount=0;
+function addlink(month, day, href) {
+var entry = new Array(3);
+entry[0] = month;
+entry[1] = day;
+entry[2] = href;
+this[linkcount++] = entry;
+}
+Array.prototype.addlink = addlink;
+linkdays = new Array();
+monthdays = new Array(12);
+monthdays[0]=31;
+monthdays[1]=28;
+monthdays[2]=31;
+monthdays[3]=30;
+monthdays[4]=31;
+monthdays[5]=30;
+monthdays[6]=31;
+monthdays[7]=31;
+monthdays[8]=30;
+monthdays[9]=31;
+monthdays[10]=30;
+monthdays[11]=31;
+todayDate=new Date();
+thisday=todayDate.getDay();
+thismonth=todayDate.getMonth();
+thisdate=todayDate.getDate();
+thisyear=todayDate.getYear();
+thisyear = thisyear % 100;
+thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+if (((thisyear % 4 == 0) 
+&& !(thisyear % 100 == 0))
+||(thisyear % 400 == 0)) monthdays[1]++;
+startspaces=thisdate;
+while (startspaces > 7) startspaces-=7;
+startspaces = thisday - startspaces + 1;
+if (startspaces < 0) startspaces+=7;
+document.write("<table border=2 bgcolor=white ");
+document.write("bordercolor=black><font color=black>");
+document.write("<tr><td colspan=7><center><strong>" 
++ monthnames[thismonth] + " " + thisyear 
++ "</strong></center></font></td></tr>");
+document.write("<tr>");
+document.write("<td align=center>Su</td>");
+document.write("<td align=center>M</td>");
+document.write("<td align=center>Tu</td>");
+document.write("<td align=center>W</td>");
+document.write("<td align=center>Th</td>");
+document.write("<td align=center>F</td>");
+document.write("<td align=center>Sa</td>"); 
+document.write("</tr>");
+document.write("<tr>");
+for (s=0;s<startspaces;s++) {
+document.write("<td> </td>");
+}
+count=1;
+while (count <= monthdays[thismonth]) {
+for (b = startspaces;b<7;b++) {
+linktrue=false;
+document.write("<td>");
+for (c=0;c<linkdays.length;c++) {
+if (linkdays[c] != null) {
+if ((linkdays[c][0]==thismonth + 1) && (linkdays[c][1]==count)) {
+document.write("<a href=\"" + linkdays[c][2] + "\">");
+linktrue=true;
+      }
+   }
+}
+if (count==thisdate) {
+document.write("<font color='FF0000'><strong>");
+}
+if (count <= monthdays[thismonth]) {
+document.write(count);
+}
+else {
+document.write(" ");
+}
+if (count==thisdate) {
+document.write("</strong></font>");
+}
+if (linktrue)
+document.write("</a>");
+document.write("</td>");
+count++;
+}
+document.write("</tr>");
+document.write("<tr>");
+startspaces=0;
+}
+document.write("</table></p>");
+// End -->
+</script>
+</center>

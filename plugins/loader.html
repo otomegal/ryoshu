@@ -1,0 +1,85 @@
+<script>
+		// ----------------------------------------------------------------------------- //
+		// ✍️ Edit the constants below to edit the style of the loader ✍️ //
+		// ----------------------------------------------------------------------------- //
+		
+		// HOW TO ADD YOUR OWN CUSTOM LOGO – To add your own custom image for the loader, upload it to your Carrd site in a unlinked Section, add an ID `loader-image` to it. This code will detect the ID and show the image as the loader image instead of the default spinner
+		
+		const LOADER_BACKGROUND_COLOR = "rgba(255, 255, 255, 1)" // this is the background color of the page when the spinner is shown
+		const SPINNER_BORDER = "5px solid rgba(228, 235, 245, 1)" // this is the base color of the spinner
+		const SPINNER_BORDER_TOP_COLOR = "#d3b1b3" // this is the part of the spinner that spins
+		const SPINNER_WIDTH = "50px" // this is how wide/big the spinner is
+		const OVERLAY_TRANSITION = "opacity 1.5s" // adjust the seconds if you want the fade in/out transition to be longer
+		const REMOVE_LOADER_DELAY = 5000 // 5000 = 5 seconds. Adjust the 5000 if you want the loader to persist longer
+		const loaderImage = document.getElementById('image02');
+		
+		// ----------------------------------------------------------------------------- //
+		// 🚨 DO NOT EDIT THE CODE BELOW HERE IF YOU ARE NOT FAMILIAR WITH JAVASCRIPT 🚨 //
+		// ----------------------------------------------------------------------------- //
+		
+		// Function to create the loading spinner
+		function createLoadingSpinner() {
+		// Create the overlay
+		const overlay = document.createElement("div")
+		overlay.style.position = "fixed"
+		overlay.style.top = "0"
+		overlay.style.left = "0"
+		overlay.style.width = "100%"
+		overlay.style.height = "100%"
+		overlay.style.overflow = "hidden"
+		overlay.style.backgroundColor = LOADER_BACKGROUND_COLOR
+		overlay.style.zIndex = "1000"
+		overlay.style.display = "flex"
+		overlay.style.justifyContent = "center"
+		overlay.style.alignItems = "center"
+		
+		// Check if an image element with id loader-image exists
+		if (loaderImage) {
+		// If it exists, clone the image and add it to the overlay
+		const image = loaderImage.cloneNode(true)
+		overlay.appendChild(image)
+		} else {
+		// If not, create the spinner
+		const spinner = document.createElement("div")
+		spinner.style.border = SPINNER_BORDER
+		spinner.style.borderTop = `5px solid ${SPINNER_BORDER_TOP_COLOR}`
+		spinner.style.borderRadius = "50%"
+		spinner.style.width = SPINNER_WIDTH
+		spinner.style.height = SPINNER_WIDTH
+		spinner.style.animation = "spin 1s linear infinite"
+		overlay.appendChild(spinner)
+		}
+		
+		// Add the overlay to the body
+		document.body.appendChild(overlay)
+		
+		// Style for the animation
+		const style = document.createElement("style")
+		style.textContent = `
+		@keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); }
+		}
+		`
+		document.head.appendChild(style)
+		}
+		
+		// Function to remove the loading spinner
+		function removeLoadingSpinner() {
+		const overlay = document.querySelector('div[style*="z-index: 1000"]')
+		if (overlay) {
+		// Animate the opacity of the overlay
+		overlay.style.transition = OVERLAY_TRANSITION
+		overlay.style.opacity = "0"
+		setTimeout(() => {
+		overlay.remove()
+		}, 500) // Wait for the animation to finish before removing the overlay
+		}
+		}
+		
+		// Create the loading spinner as soon as possible
+		createLoadingSpinner()
+		
+		// Remove the loading spinner after a delay
+		setTimeout(removeLoadingSpinner, REMOVE_LOADER_DELAY)
+		</script>

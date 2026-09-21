@@ -1,5 +1,391 @@
 <head>
-    <title>Ryoshu fan page</title>
+    <title>⠀良秀.site⠀⠀✜⠀⠀grand⠀magasin⠀sisyphe</title>
+      <link rel="icon" href="favicon.gif">
+
+    <!--
+    
+    hello im xen(o) a paraphile mess i urge you to not steal anything o' this code i worked pretty hard especially with memory issues (however you CAN use the things i linked in credits okay? okay.)
+    
+    -->
+
+    <!-- no me importa. -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+    <!-- scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+        <script src="js/image.js" defer></script>
+        <script src="js/discord.js" defer></script>
+        <script src="https://status.cafe/current-status.js?name=sal" defer></script>
+                 
+    
+    <style>
+        :root {
+--space-star-mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 348.4 429.4'%3E%3Cg data-name='Layer 2'%3E%3Cpath d='M348.4 186.2C191 207.6 193 219.6 174.3 429.5c-18.9-210-16.9-222-174.3-243.4C157.4 164.8 152.8 157.4 174.2 0c21.4 157.4 16.8 164.8 174.3 186.2Z' data-name='Layer 1' style='fill:%23231f20'/%3E%3C/g%3E%3C/svg%3E");
+--space-void: 22 23 33;
+--space-moon: 162 144 104;
+--heading-mask: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 12 12'%3E%3Cpath d='M1 6a5 5 0 0 0 5-5 5 5 0 0 0 5 5 5 5 0 0 0-5 5 5 5 0 0 0-5-5z' style='fill:none;stroke:%23000;stroke-width:.6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none'/%3E%3C/svg%3E");
+}
+
+        html {
+            background-color: #6d695c;
+background-image:
+repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+background-size: 70px 120px;
+font-family: "Times New Roman", Times, serif;
+font-size: 16px;
+        }
+        body {
+            background-color: transparent;
+            color: black;
+            width: 600px;
+            margin: auto;
+        }
+
+        main {
+            background-color: transparent;
+            padding: 11px;
+        }
+
+        aside {
+            display: inline-block;
+	        vertical-align: top;
+            width: 240px;
+            background-color: transparent;
+            margin-right: 4px;
+            position: relative;
+        }
+
+        aside iframe {
+            height: 100%;
+        	width: 100%;
+        }
+        aside #content-container {
+            margin-bottom: 60px;
+            position: relative;
+        }
+        .imgmeow {
+            width: auto;
+            height: 160px;
+            background: transparent;
+            position: relative;
+        }
+        #randomImage {
+            height: 100%;
+            width: 170px;
+            object-fit: cover;
+            border-image-slice: 109 106 116 106;
+            border-image-width: 35px 35px 35px 36px;
+            border-image-outset: 25px 25px 25px 25px;
+            border-image-repeat: stretch stretch;
+            border-image-source: url("files/frames/cuteahhframe.png");
+            border-style: solid;
+            transform: rotate(4deg);
+            position: absolute;
+            right: 25px;
+        }
+        #randomCaption {
+            background: rgba(252, 249, 240, 0.8);
+            color: black;
+            width: auto;
+            padding: 2px;
+            padding-left: 7px; padding-right: 7px;
+            z-index: 1 !important;
+            position: absolute;
+            left: 20px; transform: rotate(-2deg);
+            border: 1px solid black;
+        }
+        .button-box {
+            background: rgba(255, 254, 252, 0.94);
+            color: rgb(0, 0, 0);
+            padding: 2px;
+            padding-left: 7px; padding-right: 7px;
+            text-align: justify;
+            font-size: 14px;
+        }
+.container, blockquote, div.blockquote {
+    background-color: transparent;
+    border: none;
+    padding: 7px;
+    position: relative;
+    right: 0px;
+    min-height: 2rem;
+    margin-bottom: 12px;
+}
+:where(.container, blockquote, div.blockquote)::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    box-sizing: border-box;
+    width: 100%; height: 100%;
+    border: solid 0.1rem rgb(var(--space-moon));
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
+    pointer-events: none;
+}
+:where(.container, blockquote, div.blockquote)::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    box-sizing: border-box;
+    width: 2rem; height: 2rem;
+    background-color: rgb(var(--space-moon));
+    -webkit-mask-image: var(--space-star-mask);
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-image: var(--space-star-mask);
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    transform: translate(-50%, -42.5%);
+}
+h1 {
+    text-align: right;
+    margin-top: 5%;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1;
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 8px;
+    align-items: center;
+    display: flex;
+    color: rgb(103, 84, 42);
+}
+
+:is(h1)::before,
+:is(h1)::after {
+    content: "";
+    display: block;
+    height: 0.1rem;
+    min-width: 2.5rem;
+    flex-grow: 1;
+    background: currentColor;
+    order: 1;
+}
+:is(h1)::after {
+    flex-grow: 0;
+    width: 1.75rem;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    -webkit-mask-image: var(--heading-mask);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    mask-image: var(--heading-mask);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+}
+
+.statuscafe-container {
+    width: 100%;
+    margin-bottom: 136px;
+}
+.statuscafe-pagedoll {
+    position: absolute;
+    left: 6px;
+    transform: rotate(-1deg);
+}
+#statuscafe {
+    padding: .5em;
+    background-color: rgb(255, 253, 243);
+    border: 1px solid rgb(131, 127, 75);
+    height: 80px;
+    width: 140px;
+    transform: rotate(2deg);
+    position: absolute;
+    right: 16px;
+    border-radius: 10px;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+    margin-left: 20px;
+    font-size: 12px;
+}
+#statuscafe-username a {
+    font-size: 0px;
+}
+#statuscafe-username a::after {
+    font-size: 14px;
+    content: "Xen";
+    font-style: italic;
+    color:rgb(103, 84, 42);
+}
+
+#statuscafe-content {
+    background-color: transparent;
+    margin-left: 13px;
+    height: 56px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+        #status-blob {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  /* margin top to align is prob bad but idk how to css... */
+  margin-top: 4px;
+}
+
+#status-details {
+  margin: 0;
+  padding-right: 5px;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+    background: rgba(252, 249, 240, 0.8);
+            color: black;
+            width: auto;
+            padding: 2px;
+            padding-left: 7px; padding-right: 7px;
+            z-index: 999 !important;
+            position: absolute;
+            right: 20px; top: 183px;transform: rotate(1deg);
+            border: 1px solid black;
+}
+
+        article {
+            display: inline-block;
+	        vertical-align: top;
+            width: 330px;
+            background-color: transparent;
+        }
+        nav, .main-container {
+            background-color: rgb(255, 253, 243);
+            border: 4px double rgb(131, 127, 75);
+            margin-top: 10px;
+            padding: 5px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        nav {
+            text-align: center;
+            width:250px;
+            margin: auto;
+            color:rgb(47, 35, 9);
+        }
+        nav a {
+            color: rgb(110, 103, 83);
+        }
+
+        .main-container h1 {
+            margin-top: 5px;
+        }
+        .divide-container {
+            height: 183px;
+            width: 100%;
+        }
+
+        a {
+            color: rgb(102, 91, 39);
+            text-decoration: dotted;
+        }
+
+        h2 {
+            color: rgb(103, 84, 42);
+            font-weight: 300;
+            font-size: 25px;
+            margin-top: 8px;
+            margin-bottom: 9px;
+            text-align: center;
+        }
+
+        header {
+            height: 165px;
+        }
+        .heading {
+            font-size: 40px;
+            color: rgb(181, 169, 147);
+            border-left: 5px solid rgb(209, 197, 167);
+            padding-left: 10px;
+            position: relative;
+            top: 40px; left: 120px;
+        }
+        .heading small {
+            font-size: 25px;
+            color: rgb(42, 39, 33);
+        }
+    </style>
 </head>
 
-<img src="files/misc/gfanme.png" style="float: left;"> I love my girlfriend so so so much idk when i can finish this site this is meant as a coming soon page but I just love her. Okay? Okay. Hi Lucia
+<body>
+    <header>
+        <div class="heading">
+        <strong style="font-size: 50px; color: rgb(236, 225, 182);">良秀</strong>.site<br>
+        <small><i>Not really #4, but my #1</i></small>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <!-- jeanne roulette -->
+            <div id="content-container">
+                <div class="imgmeow"><center><img id="randomImage" src="" alt="Taken from my Jeanne folder!"></center></div>
+                <div id="randomCaption"></div>
+            </div>
+            <!-- discord status (thank you rice.place) -->
+            <div class="status">
+                <p id="status-details">loading...</p>
+                <div id="status-blob"></div>
+            </div>
+            <!-- jeanne buttons! -->
+            <div class="container" style="width: 93%;">
+            <div class="button-box">
+                <h1>Link Me <i>!</i></h1>
+                <i>Before you use my button, please do not hotlink! Store it in your own server. Use the puny-decoded version as well, as this website URL uses special characters. Thank you!</i><br>
+                <center><img src="files/buttons/jeannebutton1.png" alt="Made by Xen, xen@rodion.ink"></center>
+                <textarea readonly><a href="https://xn--4lzu1p.site/"><img src="FILE-LINK" alt="Made by Xen, xen@rodion.ink"></a></textarea>
+            </div>
+            </div>
+            <!-- status cafe widget -->
+            <div class="statuscafe-container">
+            <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div>
+            <img src="files/pngs/jeannethinking.png" width="90px" class="statuscafe-pagedoll">
+            </div>
+            <!-- calendar -->
+            <div class="container" style="height: 188px;">
+            <iframe class="theme-frame" src="plugins/calendar.html" width="100%" height="100%" style="border:none"></iframe>
+            </div>
+        </aside>
+        <article>
+            <nav>
+                <a href="index.html">Home</a> ❊ <a href="blog.html">Blog</a> ❊ <a href="https://drive.google.com/drive/u/1/folders/11g-6wJpDIx11LBAJX8ni2s-EwbRtyNp-">Jeanne Art Drive</a>
+            </nav>
+            <div class="main-container" style="padding-top: 7px; text-align: justify;">
+                <img src="files/janne.png" style="float: left; margin-right: 5px;" width="140px"> Hello! I'm <b>Xen</b>, a reader of L'Etranger and player of Limbus Company! I am the host of a DID system, and as such, I identify myself as cis-fem with she/it pronouns. <a href="mailto:xen@rodion.ink">Email me :3</a>
+                <br><br>
+                This website is meant as a blog, and as a shrine for Jeanne-Marie Cardona, who I have been married to since September 18th, 2026! <i>Yes, I really appreciate MeurJeanne / Jeansault!</i>
+                <br><br>
+                I am <b>NOT</b> spoiler-free, but I will respect people who do not want to discuss Canto 10 with me yet. Thanks for reading!
+            </div>
+            <div class="main-container" style="padding-top: 7px; text-align: justify;">
+                <h1>Domain</h1>
+                The Japanese character, 良秀, pronounced <i>ryōshū</i>, is based on the Limbus Company character <a href="https://limbuscompany.wiki.gg/wiki/Ry%C5%8Dsh%C5%AB">Ryōshū</a>. When I first finished Canto 9, I have been a really big fan of her storyline in the House of Spiders. I cherish the story and the entire Season lots, and I will miss it forever...
+                <br><br>
+                The Website slogan is a reference to Ryo's occupation as Sinner #4 of Limbus Company's Bus Department, and that Jeanne is my #1.
+            </div>
+            <div class="main-container" style="height: 100px; overflow-x: hidden; overflow-y: hidden;">
+                <h1>My Neighbors</h1>
+                N/A
+            </div>
+            <div class="divide-container">
+                <div class="main-container" style="width: 56.5%; float: left; height: 160px; overflow-x: hidden;
+                overflow-y: auto;">
+                <h2>WebRings</h2>
+                N/A
+                </div>
+                <div class="main-container" style="width: 30%; float: right; height: 160px; overflow-x: hidden;
+                overflow-y: auto;">
+                <!--- Cliques --->
+                No Cliques Yet
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
