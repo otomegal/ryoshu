@@ -1,0 +1,73 @@
+body {
+    margin:0;
+    padding:0;
+    background-color:#f1e9f3;
+}
+img {
+    border:0px;
+}
+
+.feed-container {
+    font-size:12px;
+    border:1px solid #CCC;
+}
+.feed-container .header {
+    margin:0px;
+    padding:5px 5px 5px 5px;
+    font-size:14px;
+    border-bottom:1px solid #CCC;
+}
+.feed-container .footer {
+    margin:0px;
+    padding:5px 5px 5px 5px;
+    color:#fff;
+}
+.feed-container .header .title {
+    margin:0;
+    padding:0;
+    font-weight:bold;
+    color:#5a4860;
+}
+.feed-container .header a {
+    text-decoration:none;
+    color:#5a4860;
+}
+.feed-container .header a:hover {
+    text-decoration:underline;
+    color:#5a4860;
+}
+.feed-container .content {
+    margin:0px;
+    padding:0 3px;
+}
+.feed-container .content .item {
+    margin:0 0 7px 0;
+    padding:0 0 7px 0;
+    border-bottom:1px dashed #CCC;
+}
+.feed-container .content .item .title {
+    margin:1px 0 1px 3px;
+    padding:1px 2px 1px 3px;
+    color:#5a4860;
+    font-weight:bold;
+}
+.feed-container .content .item .title a {
+    color:#5a4860;
+    text-decoration:none;
+}
+.feed-container .content .item .title a:hover {
+    text-decoration:underline;
+}
+.feed-container .content .item .description {
+    margin:0 0 0 3px;
+    padding:0 2px 0 3px;
+    color:#666;
+}
+.feed-container .content .item .description a {
+    text-decoration:none;
+    color:#5a4860;
+}
+.feed-container .content .item .description a:hover {
+    text-decoration:underline;
+    color:#5a4860;
+}
