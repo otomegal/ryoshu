@@ -9,15 +9,19 @@
     -->
 
     <!-- no me importa. -->
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" href="css/blog.css">
 
     <!-- scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
         crossorigin="anonymous"></script>
-        <script src="js/image.js" defer></script>
-        <script src="js/discord.js" defer></script>
-        <script src="https://status.cafe/current-status.js?name=sal" defer></script>
+        <script src="js/blog.js"></script>
+  	<script>
+		// Overwriting config globals
+	  	RSSLink = "rss.xml";
+		MicroblogDivID = "microblog";
+		//DisplayLatestPosts = 30;
+	</script>
                  
     
     <style>
@@ -51,90 +55,6 @@ font-size: 16px;
             padding: 11px;
             width: 600px;
         }
-
-        aside {
-            display: inline-block;
-	        vertical-align: top;
-            width: 240px;
-            background-color: transparent;
-            margin-right: 4px;
-            position: relative;
-        }
-.container, blockquote, div.blockquote {
-    background-color: transparent;
-    border: none;
-    padding: 7px;
-    position: relative;
-    right: 0px;
-    min-height: 2rem;
-    margin-bottom: 12px;
-}
-:where(.container, blockquote, div.blockquote)::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    box-sizing: border-box;
-    width: 100%; height: 100%;
-    border: solid 0.1rem rgb(var(--space-moon));
-    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 1.425rem, 1.125rem 0);
-    pointer-events: none;
-}
-:where(.container, blockquote, div.blockquote)::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    box-sizing: border-box;
-    width: 2rem; height: 2rem;
-    background-color: rgb(var(--space-moon));
-    -webkit-mask-image: var(--space-star-mask);
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mask-image: var(--space-star-mask);
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    transform: translate(-50%, -42.5%);
-}
-h1 {
-    text-align: right;
-    margin-top: 5%;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 1;
-    padding-bottom: 0;
-    border-bottom: none;
-    margin-bottom: 8px;
-    align-items: center;
-    display: flex;
-    color: rgb(103, 84, 42);
-}
-
-:is(h1)::before,
-:is(h1)::after {
-    content: "";
-    display: block;
-    height: 0.1rem;
-    min-width: 2.5rem;
-    flex-grow: 1;
-    background: currentColor;
-    order: 1;
-}
-:is(h1)::after {
-    flex-grow: 0;
-    width: 1.75rem;
-    min-width: 1.75rem;
-    height: 1.75rem;
-    -webkit-mask-image: var(--heading-mask);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    mask-image: var(--heading-mask);
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    mask-position: center;
-}
-
         article {
             display: inline-block;
 	        vertical-align: top;
@@ -152,7 +72,7 @@ h1 {
         }
         nav {
             text-align: center;
-            width:250px;
+            width:280px;
             margin: auto;
             color:rgb(47, 35, 9);
         }
@@ -172,16 +92,6 @@ h1 {
             color: rgb(102, 91, 39);
             text-decoration: dotted;
         }
-
-        h2 {
-            color: rgb(103, 84, 42);
-            font-weight: 300;
-            font-size: 25px;
-            margin-top: 8px;
-            margin-bottom: 9px;
-            text-align: center;
-        }
-
         header {
             height: 165px;
         }
@@ -199,8 +109,8 @@ h1 {
         }
     </style>
 </head>
-
-<body>
+ 
+<body onload="retrieveXML()">
     <header>
         <div class="heading">
         <strong style="font-size: 50px; color: rgb(236, 225, 182);">良秀</strong>.site<br>
@@ -210,56 +120,10 @@ h1 {
     <main>
         <article>
             <nav>
-                <a href="https://xn--4lzu1p.site/">Home</a> ❊ <a href="blog">Blog</a> ❊ <a href="https://drive.google.com/drive/u/1/folders/11g-6wJpDIx11LBAJX8ni2s-EwbRtyNp-">Jeanne Art Drive</a>
+                <a href="https://xn--4lzu1p.site/">Home</a> ❊ Blog (here) ❊ <a href="https://drive.google.com/drive/u/1/folders/11g-6wJpDIx11LBAJX8ni2s-EwbRtyNp-">Jeanne Art Drive</a>
             </nav>
-            <div class="main-container" style="width: 400px; height: 18px; margin: auto;margin-top: 10px;">
-                I'm still working on this feed. Waaah~
-            </div>
-            <!-- start sw-rss-feed code --> 
-<script type="text/javascript"> 
-<!-- 
-rssfeed_url = new Array(); 
-rssfeed_url[0]="https://xn--4lzu1p.site/rss.xml";  
-rssfeed_frame_width="400"; 
-rssfeed_frame_height="550"; 
-rssfeed_scroll="off"; 
-rssfeed_scroll_step="6"; 
-rssfeed_scroll_bar="off"; 
-rssfeed_target="_blank"; 
-rssfeed_font_size="12"; 
-rssfeed_font_face="Times New Roman"; 
-rssfeed_border="on"; 
-rssfeed_css_url="https://xn--4lzu1p.site/css/blog.css"; 
-rssfeed_title="off"; 
-rssfeed_title_name=""; 
-rssfeed_title_bgcolor="#3366ff"; 
-rssfeed_title_color="#fff"; 
-rssfeed_title_bgimage=""; 
-rssfeed_footer="on"; 
-rssfeed_footer_name="rss feed"; 
-rssfeed_footer_bgcolor="#fff"; 
-rssfeed_footer_color="#333"; 
-rssfeed_footer_bgimage=""; 
-rssfeed_item_title_length="50"; 
-rssfeed_item_title_color="#666"; 
-rssfeed_item_bgcolor="#fff"; 
-rssfeed_item_bgimage=""; 
-rssfeed_item_border_bottom="on"; 
-rssfeed_item_source_icon="off"; 
-rssfeed_item_date="off"; 
-rssfeed_item_description="on"; 
-rssfeed_item_description_length="120"; 
-rssfeed_item_description_color="#666"; 
-rssfeed_item_description_link_color="#333"; 
-rssfeed_item_description_tag="off"; 
-rssfeed_no_items="0"; 
-rssfeed_cache = "1217f77ab434bba60f582c73d3b6f428"; 
-//--> 
-</script> 
-<script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script> 
-<!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
-<div style="color:#ccc;font-size:10px; text-align:right; width:400px;">made possible by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a>~ thank you!</div> 
-<!-- end sw-rss-feed code -->
         </article>
     </main>
+<div id="microblog"></div>
+<div id="footer">I use <a href="https://github.com/22ru/microblog" target="_blank" rel="noopener noreferrer">this widget</a> for the microblog.</div>
 </body>

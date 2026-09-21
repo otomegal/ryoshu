@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
 	<channel>
-		<title>Grand Magasin Sisyphe</title>
+		<title>Grand Magasin Sisyphe ┈ Jeanne's Blog</title>
+	<link>https://xn--4lzu1p.site/blog</link>
+	<description>Ma puce, don't you think this is a pleasant way to share your life? Maybe, you can learn something from it. Haha~</description>
+	<webMaster>Jeanne</webMaster>
+	<generator>@JeanneCardona</generator>
+	<link rel="shortcut icon" href="files/janne.png" />
+	<image>
+		<url>https://xn--4lzu1p.site/files/janne.png</url>
+		<title>Grand Magasin Sisyphe ┈ Jeanne's Blog</title>
 		<link>https://xn--4lzu1p.site/blog</link>
-		<description>Jeanne's humble abode as a Giant in N Corp.</description>
-		<webMaster>xen@rodion.ink -- Xen!</webMaster>
+	</image>
 
-		<item>
-			<title>Introduction</title>
-			<link>https://xn--4lzu1p.site/blog/intro</link>
-			<description>Xen's Intro</description>
-			<pubDate>Mon, 21 Sep 2026 13:20:20 -0500</pubDate>
-		</item>
+	<item>
+		<guid isPermaLink="false">1</guid>
+		<title>^_^</title>
+		<pubDate>Mon, 21 Sep 2026 19:37:16 GMT</pubDate>
+		<link>https://xn--4lzu1p.site/blog#1</link>
+		<description></description>
+	</item>
 
 	</channel>
 </rss>
