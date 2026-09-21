@@ -6,6 +6,8 @@ body {
     padding: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
+    font-size: 16px;
+    font-family: Times New Roman;
 }
 img {
     border:0px;
@@ -18,7 +20,7 @@ img {
 .feed-container .header {
     margin:0px;
     padding:5px 5px 5px 5px;
-    font-size:14px;
+    font-size:18px;
     border-bottom:1px solid #CCC;
 }
 .feed-container .footer {
