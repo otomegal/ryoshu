@@ -3,13 +3,13 @@
 
 	<channel>
 		<title>Grand Magasin Sisyphe</title>
-		<link>https://xn--4lzu1p.site/blog.html</link>
+		<link>https://xn--4lzu1p.site/blog</link>
 		<description>Jeanne's humble abode as a Giant in N Corp.</description>
 		<webMaster>xen@rodion.ink -- Xen!</webMaster>
 
 		<item>
 			<title>Introduction</title>
-			<link>https://xn--4lzu1p.site/blog/intro.html</link>
+			<link>https://xn--4lzu1p.site/blog/intro</link>
 			<description>Xen's Intro</description>
 			<pubDate>Mon, 21 Sep 2026 13:20:20 -0500</pubDate>
 		</item>
